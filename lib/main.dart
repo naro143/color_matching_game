@@ -7,6 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Color matching game',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -28,7 +29,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _r = 0;
   int _g = 0;
   int _b = 0;
-  bool _answer;
+  bool _ans;
   List _color = [];
 
   List createColor() {
@@ -53,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    _answer = false;
+    _ans = false;
     setState(() {
       _color = createColor();
     });
@@ -132,7 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
           SizedBox(height: 10.0),
-          _answer
+          _ans
               ? Column(
                   children: <Widget>[
                     Text(
@@ -161,15 +162,15 @@ class _MyHomePageState extends State<MyHomePage> {
           MaterialButton(
             onPressed: () {
               setState(() {
-                _color = _answer ? createColor() : _color;
-                _r = _answer ? 0 : _r;
-                _g = _answer ? 0 : _g;
-                _b = _answer ? 0 : _b;
-                _answer = !_answer;
+                _color = _ans ? createColor() : _color;
+                _r = _ans ? 0 : _r;
+                _g = _ans ? 0 : _g;
+                _b = _ans ? 0 : _b;
+                _ans = !_ans;
               });
             },
             child: Text(
-              _answer ? "NEXT COLOR" : "SHOW RESULT",
+              _ans ? "NEXT COLOR" : "SHOW RESULT",
               style: TextStyle(color: Colors.blue),
             ),
           ),
