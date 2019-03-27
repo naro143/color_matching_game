@@ -210,3 +210,6 @@ class _MyHomePageState extends State<MyHomePage> {
 ```
 
 ### Total Dart Code Size: 4996 bytes
+
+## License
+MIT
