@@ -1,7 +1,7 @@
 # color_matching_game
 A Color Matching Game built with Flutter.
 
-Play by specifying the red, green and blue buttons in 3 steps to be the same as the theme color.
+Play by specifying the red, green and blue buttons in 3 steps to be the same as the theme color.  
 It is more fun with knowledge of color codes.
 
 ## Getting Started
@@ -13,16 +13,16 @@ It is more fun with knowledge of color codes.
 
 ## Screenshots
 ### iOS
-![ios-1](https://github.com/naro143/color_matching_game/blob/master/screenshots/iOS_1.png)
-![ios-2](https://github.com/naro143/color_matching_game/blob/master/screenshots/iOS_2.png)
-![ios-3](https://github.com/naro143/color_matching_game/blob/master/screenshots/iOS_3.png)
-![ios-4](https://github.com/naro143/color_matching_game/blob/master/screenshots/iOS_4.png)
+<img src="https://github.com/naro143/color_matching_game/blob/master/screenshots/iOS_1.png" height="500">
+<img src="https://github.com/naro143/color_matching_game/blob/master/screenshots/iOS_2.png" height="500">
+<img src="https://github.com/naro143/color_matching_game/blob/master/screenshots/iOS_3.png" height="500">
+<img src="https://github.com/naro143/color_matching_game/blob/master/screenshots/iOS_4.png" height="500">
 
 ### Android
-![android-1](https://github.com/naro143/color_matching_game/blob/master/screenshots/Android_1.jpg)
-![android-2](https://github.com/naro143/color_matching_game/blob/master/screenshots/Android_2.jpg)
-![android-3](https://github.com/naro143/color_matching_game/blob/master/screenshots/Android_3.jpg)
-![android-4](https://github.com/naro143/color_matching_game/blob/master/screenshots/Android_4.jpg)
+<img src="https://github.com/naro143/color_matching_game/blob/master/screenshots/Android_1.jpg" height="500">
+<img src="https://github.com/naro143/color_matching_game/blob/master/screenshots/Android_2.jpg" height="500">
+<img src="https://github.com/naro143/color_matching_game/blob/master/screenshots/Android_3.jpg" height="500">
+<img src="https://github.com/naro143/color_matching_game/blob/master/screenshots/Android_4.jpg" height="500">
 
 ## Code
 ```dart
