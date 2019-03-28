@@ -12,6 +12,13 @@ It is more fun with knowledge of color codes.
 - Even if the result is displayed, you can change the color by pressing the red, green and blue buttons.
 - You can go to the next theme color with the "NEXT COLOR" button.
 
+## Get App
+### iOS
+App Store
+
+### Android
+[Play Store](https://play.google.com/store/apps/details?id=com.naro143.color_matching_game)
+
 ## Screenshots
 ### iOS
 <img src="https://github.com/naro143/color_matching_game/blob/master/screenshots/iOS_1.png" height="500">
