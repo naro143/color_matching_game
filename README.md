@@ -1,5 +1,6 @@
 # color_matching_game
-A Color Matching Game built with Flutter.
+A Color Matching Game built with Flutter.  
+It is a simple app that does not add a plug-in.  
 
 Play by specifying the red, green and blue buttons in 3 steps to be the same as the theme color.  
 It is more fun with knowledge of color codes.
