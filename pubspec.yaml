@@ -2,7 +2,7 @@ name: color_matching_game
 description: A Crossplatform Color Matching Game made with Flutter.
 author: Yusuke Ishimi
 homepage: https://github.com/naro143/color_matching_game
-version: 0.1.0+2
+version: 1.0.0+3
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
