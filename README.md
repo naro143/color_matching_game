@@ -14,7 +14,6 @@ It is more fun with knowledge of color codes.
 
 ## Get App
 ### iOS
-App Store
 [App Store](https://itunes.apple.com/us/app/color-matching-game-flutter/id1457916350)
 
 ### Android
