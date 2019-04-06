@@ -19,6 +19,9 @@ It is more fun with knowledge of color codes.
 ### Android
 [Play Store](https://play.google.com/store/apps/details?id=com.naro143.color_matching_game)
 
+## Show summary in Medium
+[Summary of Participated in the Flutter Create](https://medium.com/@naro143/summary-of-participated-in-the-flutter-create-b1de39ec76cf)
+
 ## Screenshots
 ### iOS
 <img src="https://github.com/naro143/color_matching_game/blob/master/screenshots/iOS_1.png" height="500">
