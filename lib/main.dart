@@ -29,35 +29,40 @@ class _MyHomePageState extends State<MyHomePage> {
   int _r = 0;
   int _g = 0;
   int _b = 0;
-  bool _ans;
-  List _color = [];
+  bool _showResult;
+  List<int> _color;
 
-  List createColor() {
-    List color = [];
+  List<int> createColor() {
+    return List.generate(3, (i) => 85 * Random().nextInt(3));
+  }
+
+  String maxColorLabel() {
     List colorLabel = ["Red", "Green", "Blue", "Multiple"];
-    String maxColor;
-    int max = 0;
-    for (int i = 0; i < 3; i++) {
-      int num = 85 * Random().nextInt(3);
-      color.add(num);
-      if (max < num) {
-        max = num;
-        maxColor = colorLabel[i];
-      } else if (max == num) {
-        maxColor = colorLabel[3];
-      }
+    int maxValue = _color.reduce((curr, next) => max(curr, next));
+    if (_color.where((value) => maxValue == value).length > 1) {
+      return colorLabel[3];
     }
-    color.add(maxColor);
-    return color;
+    return colorLabel[_color.indexWhere((value) => maxValue == value)];
+  }
+
+  int addColorValue(int value) {
+    return value == 255 ? 0 : value + 85;
+  }
+
+  void clearState() {
+    setState(() {
+      _color = createColor();
+      _r = 0;
+      _g = 0;
+      _b = 0;
+      _showResult = false;
+    });
   }
 
   @override
   void initState() {
     super.initState();
-    _ans = false;
-    setState(() {
-      _color = createColor();
-    });
+    clearState();
   }
 
   @override
@@ -84,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           SizedBox(height: 10.0),
           Text(
-            "The biggest one is ${_color[3]}",
+            "The biggest one is ${maxColorLabel()}",
             style: TextStyle(
                 color: Color.fromRGBO(_color[0], _color[1], _color[2], 1.0)),
           ),
@@ -95,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    _r = _r == 255 ? 0 : _r + 85;
+                    _r = addColorValue(_r);
                   });
                 },
                 color: Color.fromRGBO(_r, 0, 0, 1),
@@ -108,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    _g = _g == 255 ? 0 : _g + 85;
+                    _g = addColorValue(_g);
                   });
                 },
                 color: Color.fromRGBO(0, _g, 0, 1),
@@ -121,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    _b = _b == 255 ? 0 : _b + 85;
+                    _b = addColorValue(_b);
                   });
                 },
                 color: Color.fromRGBO(0, 0, _b, 1),
@@ -133,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
           SizedBox(height: 10.0),
-          _ans
+          _showResult
               ? Column(
                   children: <Widget>[
                     Text(
@@ -161,16 +166,16 @@ class _MyHomePageState extends State<MyHomePage> {
           SizedBox(height: 10.0),
           MaterialButton(
             onPressed: () {
-              setState(() {
-                _color = _ans ? createColor() : _color;
-                _r = _ans ? 0 : _r;
-                _g = _ans ? 0 : _g;
-                _b = _ans ? 0 : _b;
-                _ans = !_ans;
-              });
+              if (_showResult){
+                clearState();
+              } else {
+                setState(() {
+                  _showResult = true;
+                });
+              }
             },
             child: Text(
-              _ans ? "NEXT COLOR" : "SHOW RESULT",
+              _showResult ? "NEXT COLOR" : "SHOW RESULT",
               style: TextStyle(color: Colors.blue),
             ),
           ),
