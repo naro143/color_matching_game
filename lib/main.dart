@@ -166,7 +166,7 @@ class _MyHomePageState extends State<MyHomePage> {
           SizedBox(height: 10.0),
           MaterialButton(
             onPressed: () {
-              if (_showResult){
+              if (_showResult) {
                 clearState();
               } else {
                 setState(() {
